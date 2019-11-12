@@ -1,9 +1,9 @@
-#安装
+# 安装
 拷贝 source/script/vue 文件夹到APPworker项目的 source/script 目录下
 
-#具体用例可以下载后在APPworker 编辑器内查看
+# 具体用例可以下载后在APPworker 编辑器内查看
 
-#基础用法
+# 基础用法
 
 ```javascript
 // *.ui.js
