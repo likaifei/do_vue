@@ -29,7 +29,8 @@ var vue = new Vue({
 	watch: watch,
 	created: function(){
 		this.message = 'hello do_vue!';
-		this.obj.a = 'this is an example!'
+		this.obj.a = 'this is an example!';
+		this.$refs.do_Label_3.bgColor = "00000022"; // 还可以拿到组件实例
 	},
 	computed: {
 		calcMessage: function(){

@@ -129,11 +129,11 @@ function initEl(){
 					extra(vm, data, el[getter])
 				}})(data))
 				var fn = {uid: uid++, fn: 
-				(function cb(el, k){
-					return function(v){
-						el[k] = v
-					}
-				})(el, setter)};
+					(function cb(el, k){
+						return function(v){
+							el[k] = v
+						}
+					})(el, setter)};
 				pushStack(fn)
 				fn.fn(extra(vm, data))
 				popStack()

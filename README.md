@@ -23,6 +23,7 @@ new vue({
 	// 挂载完成会执行 created
 	created: function(){
 		this.message = 'hello do_vue!';
+		this.$refs.do_Label_3.bgColor = "00000022"; // 还可以直接操作组件
 	},
 	// 观察者
 	watch: {
