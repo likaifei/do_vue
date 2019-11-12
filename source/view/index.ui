@@ -1,0 +1,85 @@
+{
+	"RootView":{
+		"bgColor":"FFFFFFFF",
+		"width":"750",
+		"id":"ALayout_1",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"80808080",
+				"x":"109",
+				"width":"365",
+				"y":"514",
+				"id":"btn_hello",
+				"text":"绑定属性name 触发一个js语句",
+				"tag":":text=\"obj.a > 10 && c>10 \" @touch=\"click('abc')\"",
+				"type":"do_Button",
+				"height":"55"
+			},
+			{
+				"border":"000000FF,1,[0,0,0,0]",
+				"x":"114",
+				"width":"498",
+				"y":"166",
+				"id":"do_TextField_1",
+				"tag":"v-model=\"arr1[2]\"",
+				"type":"do_TextField",
+				"height":"81"
+			},
+			{
+				"bgColor":"80808080",
+				"x":"433",
+				"width":"299",
+				"y":"612",
+				"id":"do_Button_1",
+				"text":"绑定一个对象",
+				"tag":"@touch=\"obj.a++\" :text=\"obj.a\"",
+				"type":"do_Button",
+				"height":"108"
+			},
+			{
+				"border":"000000FF,1,[0,0,0,0]",
+				"x":"118",
+				"width":"481",
+				"y":"270",
+				"id":"do_TextField_2",
+				"tag":"v-model=\"arr[2]\"",
+				"type":"do_TextField",
+				"height":"81"
+			},
+			{
+				"border":"000000FF,1,[0,0,0,0]",
+				"x":"120",
+				"width":"525",
+				"y":"377",
+				"id":"do_TextField_3",
+				"tag":"v-model=\"obj.a\"",
+				"type":"do_TextField",
+				"height":"81"
+			},
+			{
+				"bgColor":"80808080",
+				"x":"27",
+				"width":"299",
+				"y":"612",
+				"id":"do_Button_2",
+				"text":"绑定数组中的一个对象",
+				"tag":"@touch=\"arr[1]++\" :text=\"arr[1]\"",
+				"type":"do_Button",
+				"height":"108"
+			},
+			{
+				"bgColor":"000000EE",
+				"x":"50",
+				"width":"233",
+				"y":"806",
+				"id":"arr11a",
+				"text":"修改数组, 数组unshift",
+				"type":"do_Button",
+				"fontColor":"FFFFFFFF",
+				"height":"73"
+			}
+		],
+		"height":"1334"
+	}
+}
