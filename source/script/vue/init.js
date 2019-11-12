@@ -69,11 +69,6 @@ function initEl(){
 			}
 		}
 	}
-	function cb(el, k){
-		return function(v){
-			el[k] = v
-		}
-	}
 	function bind(el){
 		var tags = el.tag.match(/(\S+?="[^"]+")/g)
 		for(var tag in tags){
@@ -133,9 +128,14 @@ function initEl(){
 					log(data, el[getter], 'v-model')
 					extra(vm, data, el[getter])
 				}})(data))
-				var fn = {uid: uid++, fn: cb(el, setter)};
+				var fn = {uid: uid++, fn: 
+				(function cb(el, k){
+					return function(v){
+						el[k] = v
+					}
+				})(el, setter)};
 				pushStack(fn)
-				fn.fn()
+				fn.fn(extra(vm, data))
 				popStack()
 			}
 		}
