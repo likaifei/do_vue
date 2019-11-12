@@ -8,29 +8,19 @@ page.on('back', function(){
 	app.closePage()
 })
 var data = {
-	name: 'abc',
-	obj: {a:3},
-	arr: [0,1,2],
-	arr1: [{a: 1}, {a: 2}, 22]
+	message: 'hello do_vue',
+	obj: {a: 'haha'}
 }
 var methods = {
-	click: function(v){
-		print(v)
-		this.arr[2]++
+	clearMessage: function(){
+		this.message = '';
 	}
 }
 var watch = {
-	"arr1[2]": function(val){
-		print(val, 'watched')
+	message: function(newVal, oldVal){
+		print(newVal, oldVal);
 	}
 }
-ui('arr11a').on('touch', function(){
-	vue.arr = [5, 5, 5]
-	vue.obj = {a: 99}
-	print(JSON.stringify(vue.arr1))
-	vue.arr1.unshift(52)
-	print(JSON.stringify(vue.arr1))
-})
 var vue = new Vue({
 	data: data,
 	methods: methods,
@@ -38,13 +28,12 @@ var vue = new Vue({
 	ui: ui,
 	watch: watch,
 	created: function(){
-		this.$refs.do_TextField_3.on('textChanged', function(){
-			print('text Change', vue.$refs.do_TextField_3.text)
-		})
+		this.message = 'hello do_vue!';
+		this.obj.a = 'this is an example!'
 	},
 	computed: {
-		c: function(){
-			return this.arr[1]
+		calcMessage: function(){
+			return this.message.split(' ').reverse().join(' ');
 		}
 	}
 })
